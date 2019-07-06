@@ -6,15 +6,20 @@
       <!-- <i slot="conten-icon" class="icon">&#xe692;</i> -->
       <!-- <i slot="right-icon" class="icon">&#xe692;</i> -->
     </tab>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
 import tab from '@/components/tab'
+import musicHall from '@/components/pages/musicHall'
+import find from '@/components/pages/find'
 export default {
   name: 'App',
   components: {
-    tab
+    tab,
   }
 }
 </script>
