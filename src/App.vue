@@ -6,6 +6,9 @@
       <!-- <i slot="conten-icon" class="icon">&#xe692;</i> -->
       <!-- <i slot="right-icon" class="icon">&#xe692;</i> -->
     </tab>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -39,8 +42,6 @@ html,body
   font-family PingFang SC, STHeitiSC-Light, Helvetica-Light, arial, sans-serif
   user-select none
   -webkit-tap-highlight-color transparentify  //点击屏幕高亮
-  // background rgba(8, 5, 58, 0.9)
-  color #aaa
-
+  background #F0F0F0
 </style>
 

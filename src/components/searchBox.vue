@@ -1,42 +1,25 @@
 <template>
-    <div class="search-box">
+    <div class="search-box" @click="jump">
         <i class="icon icon-search">&#xe638;</i>
-        <input type="text" ref="query" v-model="query" class="box" :placeholder="placeholder">
-        <router-link class="icontab" to="/search"></router-link>
+        <div type="text" ref="query" class="box" >
+            搜索
+        </div>
     </div>
 </template>
 
 <script>
 import { debounce } from '@/common/util'
 export default {
-    props: {
-        placeholder: {
-            type: String,
-            default: '搜索'
-        }
-    },
     data () {
         return {
-            query: ''
+           
         }
     },
     methods: {
-        clear () {
-            this.query = ''
-        },
-        setQuery (query) {
-            this.query = query
-        },
-        blur () {
-            this.$refs.query.blur()
+        jump () {
+             this.$router.push('/search')   
         }
     },
-    created() {
-        this.$watch('query', debounce((newQuery) => {
-            this.$emit('query', newQuery)      
-        }))
-    },
-
 }
 </script>
 
@@ -46,27 +29,32 @@ export default {
   display flex
   align-items center
   box-sizing border-box
-  width 100%
+  width 70%
   padding 0 px2rem(8px)
-  height px2rem(74px)
-  background #2f3054
-  border-radius 6px
+  height px2rem(90px)
+  background #ffffff
+  border-radius px2rem(50px)
+  
   .icon-search 
+    position relative
+    left px2rem(200px)
+    top px2rem(-5px)
     font-size 24px
     color #6b6a6a
   .box 
+    text-align center
     flex 1
     margin 0 5px
     line-height px2rem(36px)
-    background #2f3054
-    color #fff
-    font-size 14px
+    background #fff
+    color #6b6a6a
+    font-size 16px
     outline 0
     &:placeholder 
       color hsla(0, 0%, 100%, 0.3)
-  .icon-dismiss 
-    font-size 20px
-    margin-right px2rem(10px)
-    color #6b6a6a
+//   .icon-dismiss 
+//     font-size 20px
+//     margin-right px2rem(10px)
+//     color #6b6a6a
 
 </style>
