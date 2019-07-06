@@ -1,23 +1,46 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <!-- tab -->
+    <tab>
+      <!-- <i slot="left-icon" class="icon">&#xe911;</i> -->
+      <!-- <i slot="conten-icon" class="icon">&#xe692;</i> -->
+      <!-- <i slot="right-icon" class="icon">&#xe692;</i> -->
+    </tab>
   </div>
 </template>
 
 <script>
+import tab from '@/components/tab'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    tab
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+@import "./assets/css/function"
+@font-face 
+  font-family "icon"
+  /* project id 277165 */
+  src url("//at.alicdn.com/t/font_kmywdojzhchj8aor.eot ");
+  src url("//at.alicdn.com/t/font_kmywdojzhchj8aor.eot?#iefix ") format("embedded-opentype"),
+      url("//at.alicdn.com/t/font_kmywdojzhchj8aor.woff") format("woff"),
+      url("//at.alicdn.com/t/font_kmywdojzhchj8aor.ttf") format("truetype"),
+      url("//at.alicdn.com/t/font_kmywdojzhchj8aor.svg#iconfont") format("svg");
+.icon
+  font-family "icon" !important
+  font-size 18px
+  font-style normal
+  color #aaa
+html,body 
+  line-height 1
+  font-family PingFang SC, STHeitiSC-Light, Helvetica-Light, arial, sans-serif
+  user-select none
+  -webkit-tap-highlight-color transparentify  //点击屏幕高亮
+  // background rgba(8, 5, 58, 0.9)
+  color #aaa
+
 </style>
+
