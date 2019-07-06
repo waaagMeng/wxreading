@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import find from '@/components/pages/find'
 import musicHall from '@/components/pages/musicHall'
+import search from '@/components/pages/search'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/musicHall',
       name: 'musicHall',
       component: musicHall
+    },
+    {
+      path:'/search',
+        name: 'search',
+        component: search
     }
   ]
 })
