@@ -7,16 +7,19 @@
       <v-search-box  ref="searchBox"></v-search-box>
     </div>
     <v-scroll></v-scroll>
+    <v-find-tab></v-find-tab>
   </div>
 </template>
 
 <script>
 import searchBox from '@/components/searchBox'
 import scroll from '@/components/scroll'
+import findTab from '@/components/findTab'
 export default {
   components: {
     'v-search-box': searchBox,
-    'v-scroll': scroll
+    'v-scroll': scroll,
+    'v-find-tab': findTab
   },
   methods: {
    
