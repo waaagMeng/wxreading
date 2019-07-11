@@ -33,7 +33,7 @@ export default {
     },
     //歌单
     PlayLists() {
-        return fetchGet('/top/playlist',params)
+        return fetchGet('/top/playlist')
     },
     //全部mv
     AllMv() {
@@ -42,5 +42,8 @@ export default {
     //轮播图
     Banner() {
         return fetchGet('/banner')
+    },
+    Event() {
+        return fetchGet('/event')
     }
 }

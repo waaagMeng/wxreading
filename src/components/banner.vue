@@ -52,7 +52,7 @@ export default {
             console.log(res);
             this.banner = res.banners;
           } else {
-            console.log(error);
+            console.log('error');
           }
         });
     }
@@ -61,8 +61,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../assets/css/function'
 .wrapper
-	height 170px 
+	height px2rem(340px)
 	.swiper-slide img 
 		width 100%
 		border-radius 5%
