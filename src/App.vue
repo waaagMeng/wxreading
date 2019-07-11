@@ -14,10 +14,12 @@
 
 <script>
 import tab from '@/components/tab'
+import musicHall from '@/components/pages/musicHall'
+import find from '@/components/pages/find'
 export default {
   name: 'App',
   components: {
-    tab
+    tab,
   }
 }
 </script>
